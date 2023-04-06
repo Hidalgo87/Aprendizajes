@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Encuesta Estilos de Aprendizaje</string>
+    <string name="Menu_Bienvenida">Bienvenido a la Encuesta</string>
+    <string name="Menu_Registrate">Registrate</string>
+    <string name="Menu_IniciaSesion">Inicia Sesión</string>
+    <string name="Registro_Nombre">Nombre</string>
+    <string name="Registro_Edad">Edad</string>
+    <string name="Registro_Email">Correo Electrónico</string>
+    <string name="Registro_Genero">Género</string>
+    <string name="Registro_Estrato_Social">Estrato Social</string>
+    <string name="Registro_Etnia">Minoría Étnica</string>
+    <string name="Spiner_Ingresos_Familiares">Ingresos Familiares Mensuales</string>
+
+    <string-array name="Spiner_Genero">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No Binario</item>
+    </string-array>
+    <string-array name="Spiner_Etnia">
+        <item>Población Negra</item>
+        <item>Palenquero</item>
+        <item>Afrocolombiano</item>
+        <item>Raizal</item>
+        <item>No Aplica</item>
+    </string-array>
+    <string-array name="Spiner_Estrato_Social">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Spiner_Ingresos_Familiares">
+        <item>3M o menos</item>
+        <item>3M a 5M</item>
+        <item>5M a 7M</item>
+        <item>7M o más</item>
+    </string-array>
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBaseline_toBaselineOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/et_Nombre"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints="name"
+            android:hint="@string/Registro_Nombre"
+            android:inputType="textPersonName" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/et_Edad"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/Registro_Edad"
+            android:inputType="number"
+            android:maxLength="3"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <EditText
+            android:id="@+id/et_Email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints="emailAddress"
+            android:ems="10"
+            android:hint="@string/Registro_Email"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Genero"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sp_Genero"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:dropDownWidth="wrap_content"
+            android:entries="@array/Spiner_Genero"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Etnia"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sp_Etnia"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/Spiner_Etnia"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Estrato_Social"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sp_Estrato"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/Spiner_Estrato_Social"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="399dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Spiner_Ingresos_Familiares"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/sp_Ingresos_Familiares"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/Spiner_Ingresos_Familiares"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="Registrar"
+        android:text="@string/Menu_Registrate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
