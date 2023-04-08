@@ -10,12 +10,14 @@
     <TextView
         android:id="@+id/tv_menu_bienvenida"
         android:layout_width="222dp"
-        android:layout_height="101dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:layout_marginBottom="326dp"
         android:background="#4886A6"
         android:text="@string/Menu_Bienvenida"
         android:textAlignment="center"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -39,6 +41,19 @@
         android:layout_marginTop="228dp"
         android:onClick="IrAInicioSesion"
         android:text="@string/Menu_IniciaSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_menu_bienvenida" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="152dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="140dp"
+        android:onClick="IrAEncuesta"
+        android:text="ENCUESTA"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

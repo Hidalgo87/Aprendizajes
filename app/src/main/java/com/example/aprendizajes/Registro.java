@@ -3,7 +3,6 @@ package com.example.aprendizajes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 
 public class Registro extends AppCompatActivity {
 
-    EditText et_nombre, et_edad, et_correo;
+    EditText et_nombre, et_edad, et_correo, et_password;
     Spinner sp_genero, sp_etnia, sp_estrato, sp_ingresos;
 
 
@@ -31,6 +30,7 @@ public class Registro extends AppCompatActivity {
         et_nombre = (EditText) findViewById(R.id.et_Nombre);
         et_edad = (EditText) findViewById(R.id.et_Edad);
         et_correo = (EditText) findViewById(R.id.et_Email);
+        et_password = (EditText)findViewById(R.id.et_Password);
         sp_genero = (Spinner) findViewById(R.id.sp_Genero);
         sp_estrato = (Spinner) findViewById(R.id.sp_Estrato);
         sp_etnia = (Spinner) findViewById(R.id.sp_Etnia);
@@ -42,7 +42,7 @@ public class Registro extends AppCompatActivity {
             //Ingresar los datos del estudiante en el objeto
             ContentValues nuevo_estudiante = new ContentValues();
             nuevo_estudiante.put("nombre", et_nombre.getText().toString());
-            nuevo_estudiante.put("password", "perro"); //OJOOOOOOOOOOO
+            nuevo_estudiante.put("password", et_password.getText().toString());
             nuevo_estudiante.put("edad", et_edad.getText().toString());
             nuevo_estudiante.put("correo", et_correo.getText().toString());
             nuevo_estudiante.put("genero", sp_genero.getSelectedItem().toString());
@@ -51,11 +51,13 @@ public class Registro extends AppCompatActivity {
             nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
 
 
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Informacion", null, 1);
+            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
             SQLiteDatabase db = admin.getWritableDatabase();
             db.insert("estudiantes", null, nuevo_estudiante);
-            //PROBANDO
-            intentandooo();
+            /*
+            admin.close();
+            db.close();
+            */
         }
         else{
             // Informar error
@@ -63,26 +65,4 @@ public class Registro extends AppCompatActivity {
         }
     }
 
-
-    private void BD_nuevo_estudiante(ContentValues info_nuevo_estudiante){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Informacion", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase();
-        db.execSQL("INSERT INTO estudiantes (nombre, password, edad, correo, genero, estrato, etnia, ingresos_familiares) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        db.insert("estudiantes", null, info_nuevo_estudiante);
-        Cursor cursor = db.rawQuery("select * from estudiantes", null);
-        Toast.makeText(this, ""+cursor.moveToNext(), Toast.LENGTH_SHORT).show();
-        cursor.close();
-        db.close();
-    }
-
-    private void intentandooo(){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Informacion", null, 1);
-        SQLiteDatabase db = admin.getWritableDatabase();
-        String nombre = "ee";
-        Cursor cursor = db.rawQuery("select * from estudiantes", null);
-        Toast.makeText(this, ""+cursor.moveToNext(), Toast.LENGTH_SHORT).show();
-        cursor.close();
-        db.close();
-
-    }
 }

@@ -6,6 +6,7 @@
     <string name="Registro_Nombre">Nombre</string>
     <string name="Registro_Edad">Edad</string>
     <string name="Registro_Email">Correo Electrónico</string>
+    <string name="Registro_Contraseña">Contraseña</string>
     <string name="Registro_Genero">Género</string>
     <string name="Registro_Estrato_Social">Estrato Social</string>
     <string name="Registro_Etnia">Minoría Étnica</string>

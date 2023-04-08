@@ -1,0 +1,254 @@
+{
+  "k1": {
+    "Pregunta": "Cuando Aprendo:",
+    "alternativas": [
+      "Prefiero valerme de mis sensaciones y sentimientos.",
+      "Prefiero mirar y atender.",
+      "Prefiero pensar en las ideas.",
+      "Prefiero hacer cosas."
+    ]
+  },
+  "k2": {
+    "Pregunta": "Aprendo mejor cuando:",
+    "alternativas": [
+      "Confío en mis corazonadas y sentimientos.",
+      "Atiendo y observo cuidadosamente.",
+      "Confío en mis pensamientos lógicos.",
+      "Trabajo duramente para que las cosas queden realizadas."
+    ]
+  },
+  "k3": {
+    "Pregunta": "Cuando estoy aprendiendo:",
+    "alternativas": [
+      "Tengo sentimientos y reacciones fuertes.",
+      "Soy reservado y tranquilo.",
+      "Busco razonar sobre las cosas que están sucediendo.",
+      "Me siento responsable de las cosas."
+    ]
+  },
+  "k4": {
+    "Pregunta": "Aprendo a través de:",
+    "alternativas": [
+      "Sentimientos.",
+      "Observaciones.",
+      "Razonamientos.",
+      "Acciones."
+    ]
+  },
+  "k5": {
+    "Pregunta": "Cuando aprendo:",
+    "alternativas": [
+      "Estoy abierto a nuevas experiencias.",
+      "Tomo en cuenta todos los aspectos relacionados.",
+      "Prefiero analizar las cosas dividiéndolas en sus partes componentes.",
+      "Prefiero hacer las cosas directamente."
+    ]
+  },
+  "k6": {
+    "Pregunta": "Cuando estoy aprendiendo:",
+    "alternativas": [
+      "Soy una persona intuitiva.",
+      "Soy una persona observadora.",
+      "Soy una persona lógica.",
+      "Soy una persona activa."
+    ]
+  },
+  "k7": {
+    "Pregunta": "Aprendo mejor a través de:",
+    "alternativas": [
+      "Las relaciones con mis compañeros.",
+      "La observación.",
+      "Teorías racionales.",
+      "La práctica de los temas tratados."
+    ]
+  },
+  "k8": {
+    "Pregunta": "Cuando aprendo:",
+    "alternativas": [
+      "Me siento involucrado en los temas tratados.",
+      "Me tomo mi tiempo antes de actuar.",
+      "Prefiero las teorías y las ideas.",
+      "Prefiero ver los resultados a través de mi propio trabajo."
+    ]
+  },
+  "k9": {
+    "Pregunta": "Aprendo mejor cuando:",
+    "alternativas": [
+      "Me baso en mis intuiciones y sentimientos.",
+      "Me baso en observaciones personales.",
+      "Tomo en cuenta mis propias ideas sobre el tema.",
+      "Pruebo personalmente la tarea."
+    ]
+  },
+  "k10": {
+    "Pregunta": "Cuando estoy aprendiendo:",
+    "alternativas": [
+      "Soy una persona abierta.",
+      "Soy una persona reservada.",
+      "Soy una persona racional.",
+      "Soy una persona responsable."
+    ]
+  },
+  "k11": {
+    "Pregunta": "Cuando aprendo:",
+    "alternativas": [
+      "Me involucro.",
+      "Prefiero observar.",
+      "Prefiero evaluar las cosas.",
+      "Prefiero asumir actitud positiva."
+    ]
+  },
+  "k12": {
+    "Pregunta": "Aprendo mejor cuando:",
+    "alternativas": [
+      "Soy receptivo y de mente abierta.",
+      "Soy cuidadoso.",
+      "Analizo las ideas.",
+      "Soy práctico."
+    ]
+  },
+  "v1": {
+    "Pregunta": "Usted cocinará algo especial para su familia Usted haría:",
+    "alternativas": [
+      "Dar una vista al recetario por ideas de las fotos.",
+      "Preguntar a amigos por sugerencias.",
+      "Usar un libro de cocina donde usted sabe hay una buena receta.",
+      "Cocinar algo que usted sabe sin la necesidad de instrucciones."
+    ]
+  },
+  "v2": {
+    "Pregunta": "Usted escogerá alimento en un restaurante o un café. Usted haría:",
+    "alternativas": [
+      "Mirar lo qué otros comen o mirar dibujos de cada platillo.",
+      "Escuchar al mesero o pedir que amigos recomienden opciones.",
+      "Escoger de las descripciones en el menú.",
+      "Escoger algo que tienes o has tenido antes."
+    ]
+  },
+  "v3": {
+    "Pregunta": "Aparte del precio, qué más te influenciaría para comprar un libro de ciencia ficción",
+    "alternativas": [
+      "El diseño de la pasta es atractivo.",
+      "Un amigo habla acerca de él y te lo recomienda",
+      "Leyendo rápidamente partes de él.",
+      "Tienes historias reales, experiencias y ejemplos."
+    ]
+  },
+  "v4": {
+    "Pregunta": "Usted ha terminado una competencia o un examen y le gustaría tener alguna retroalimentación. Te gustaría retroalimentarte:",
+    "alternativas": [
+      "Usando gráficos que muestran lo que usted ha logrado.",
+      "De alguien que habla por usted.",
+      "Usando descripciones escritas de los resultados.",
+      "Usando ejemplos de lo que usted ha hecho."
+    ]
+  },
+  "v5": {
+    "Pregunta": "Usted tiene un problema con la rodill Usted preferiría que el doctor:",
+    "alternativas": [
+      "Te enseñe un diagrama lo que está mal.",
+      "Te describa lo qué está mal.",
+      "Te de una página de internet o algo para leer.",
+      "Use un modelo de plástico y te enseñe lo que está mal."
+    ]
+  },
+  "v6": {
+    "Pregunta": "Usted está a punto de comprar una cámara digital o teléfono o móvil. ¿Aparte del precio qué más influirá en tomar tu decisión?",
+    "alternativas": [
+      "Es un diseño moderno y se mira bien.",
+      "El vendedor me informa acerca de sus características.",
+      "Leer los detalles acerca de sus características.",
+      "Probándolo."
+    ]
+  },
+  "v7": {
+    "Pregunta": "Usted no está seguro como se deletrea trascendente o trascendente ¿U qué haría?",
+    "alternativas": [
+      "Veo la palabra en mi mente y escojo según como la veo.",
+      "Pienso cómo suena cada palabra y escojo un",
+      "Busco la palabra en un diccionario.",
+      "Escribir ambas palabras en un papel y escojo un"
+    ]
+  },
+  "v8": {
+    "Pregunta": "Me gustan páginas de Internet que tienen:",
+    "alternativas": [
+      "Diseño interesante y características visuales.",
+      "Canales donde puedo oír música, programas de radio o entrevistas.",
+      "Interesantes descripciones escritas, listas y explicaciones.",
+      "Cosas que con un click pueda cambiar o examinar."
+    ]
+  },
+  "v9": {
+    "Pregunta": "Usted está planeando unas vacaciones para un grupo. Usted quiere alguna observación de ellos acerca del plan. Usted qué haría:",
+    "alternativas": [
+      "Usa un mapa o página de Internet para mostrarles los lugares.",
+      "Describe algunos de los puntos sobresalientes.",
+      "Darles una copia del itinerario impreso.",
+      "Llamarles por teléfono o mandar mensaje por correo electrónico."
+    ]
+  },
+  "v10": {
+    "Pregunta": "Usted está usando un libro, disco compacto o página de Internet para aprender a tomar fotos con su cámara digital nuev Usted le gustaría tener:",
+    "alternativas":
+    ["Esquemas o diagramas que muestran la cámara y la función de cada parte.",
+      "Una oportunidad de hacer preguntas acerca de la cámara y sus características.",
+      "Ejemplos de buenas y malas fotos y cómo mejorarlas.",
+      "Aclarar las instrucciones escritas con listas y puntos sobre qué hacer."
+    ]
+  },
+  "v11": {
+    "Pregunta": "Usted quiere aprender un programa nuevo, habilidad o juego en una computador Usted qué hace:",
+    "alternativas": [
+      "Seguir los esquemas en el libro que acompaña el program",
+      "Hablar con gente que sabe acerca del program",
+      "Leer las instrucciones que vienen en el program",
+      "Use los controles o el teclado."
+    ]
+  },
+  "v12": {
+    "Pregunta": "Estás ayudando a alguien que quiere a ir al aeropuerto, al centro del pueblo o la estación del ferrocarril. Usted hace:",
+    "alternativas": [
+      "Les dibuja un croquis o les da un map",
+      "Les dice las direcciones.",
+      "Anote las direcciones en un papel (sin map.",
+      "Va con la person"
+    ]
+  },
+  "v13": {
+    "Pregunta": "Recuerde un momento en su vida en que U aprendió a hacer algo nuevo. Trate de evitar escoger una destreza física, como andar en biciclet U Aprendió mejor:",
+    "alternativas": [
+      "Con esquemas y diagramas o pistas visuales.",
+      "Escuchando a alguien explicarlo o haciendo preguntas.",
+      "Con instrucciones escritas, en un manual o libro de texto.",
+      ".Viendo una demostración."
+    ]
+  },
+  "v14": {
+    "Pregunta": "U Prefiere un maestro o conferencista que use:",
+    "alternativas": [
+      "Diagramas, esquemas o gráficos.",
+      "Preguntas y respuestas, pláticas y oradores invitados.",
+      "Folletos, libros o lecturas",
+      "Demostraciones, modelos o sesiones prácticas."
+    ]
+  },
+  "v15": {
+    "Pregunta": "Un grupo de turistas quiere aprender acerca de parques o reservas naturales en su áre Usted:",
+    "alternativas": [
+      "Les muestra imágenes de Internet, fotos o libros con dibujos.",
+      "Les da una plática acerca de parques o reservas naturales.",
+      "Les da un libro o folleto acerca de parques o reservas naturales.",
+      "Los acompaña a un parque o reserva natural."
+    ]
+  },
+  "v16": {
+    "Pregunta": "Usted tiene que hacer un discurso para una conferencia u ocasión especial. Usted hace:",
+    "alternativas": [
+      "Hacer diagramas o esquemas que te ayuden a explicar las cosas. ",
+      "Escribir algunas palabras claves y practicar el discurso repetidas veces.",
+      "Escribir el discurso y aprendérselo leyéndolo varias veces.",
+      "Reunir muchos ejemplos e historias para hacer el discurso verdadero y práctico."
+    ]
+  }
+}

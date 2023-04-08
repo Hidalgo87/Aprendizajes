@@ -17,7 +17,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="10dp" />
 
         <EditText
             android:id="@+id/et_Nombre"
@@ -25,11 +25,12 @@
             android:layout_height="48dp"
             android:autofillHints="name"
             android:hint="@string/Registro_Nombre"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="10dp" />
 
         <EditText
             android:id="@+id/et_Edad"
@@ -40,11 +41,11 @@
             android:hint="@string/Registro_Edad"
             android:inputType="number"
             android:maxLength="3"
-            />
+            android:textAlignment="center" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="10dp" />
 
         <EditText
             android:id="@+id/et_Email"
@@ -53,7 +54,22 @@
             android:autofillHints="emailAddress"
             android:ems="10"
             android:hint="@string/Registro_Email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/et_Password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints="password"
+            android:ems="10"
+            android:hint="@string/Registro_Contraseña"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView"
@@ -73,7 +89,7 @@
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView3"
             android:layout_width="384dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Etnia"
@@ -89,7 +105,7 @@
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView2"
             android:layout_width="378dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Estrato_Social"
@@ -105,7 +121,7 @@
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView1"
             android:layout_width="399dp"
             android:layout_height="wrap_content"
             android:text="@string/Spiner_Ingresos_Familiares"

@@ -18,7 +18,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table estudiantes (nombre text, password text, edad text, correo text," +
-                "genero text, etnia text, estrato text, ingresos_familiares text)");
+                "genero text, etnia text, estrato text, ingresos_familiares text, estiloKOLB text, estiloVARK text)");
     }
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

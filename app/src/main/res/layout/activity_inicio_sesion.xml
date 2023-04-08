@@ -9,11 +9,40 @@
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="306dp"
-        android:onClick="malparidiar"
-        android:text="Button"
+        android:layout_height="48dp"
+        android:layout_marginTop="464dp"
+        android:onClick="IniciarSesion"
+        android:text="@string/Menu_IniciaSesion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_CorreoInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:autofillHints="emailAddress"
+        android:hint="@string/Registro_Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_PasswordInicioSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:autofillHints="password"
+        android:hint="@string/Registro_Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_CorreoInicioSesion" />
 </androidx.constraintlayout.widget.ConstraintLayout>
