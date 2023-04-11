@@ -60,8 +60,6 @@ public class LectorJson {
                 }
                 diccionario.put("v"+i,preguntas_respuestas);
             }
-            System.out.println("SI DIOOOO GVN");
-            System.out.println(diccionario.get("v11"));
             return diccionario;
         }catch (IOException e){
             e.printStackTrace();

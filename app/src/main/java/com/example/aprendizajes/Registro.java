@@ -3,6 +3,7 @@ package com.example.aprendizajes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -39,30 +40,43 @@ public class Registro extends AppCompatActivity {
         //Verificar que estén completos
         if(et_nombre.getText().toString().length() != 0 && et_edad.getText().toString().length() != 0
                 && et_correo.getText().toString().length() != 0){
-            //Ingresar los datos del estudiante en el objeto
-            ContentValues nuevo_estudiante = new ContentValues();
-            nuevo_estudiante.put("nombre", et_nombre.getText().toString());
-            nuevo_estudiante.put("password", et_password.getText().toString());
-            nuevo_estudiante.put("edad", et_edad.getText().toString());
-            nuevo_estudiante.put("correo", et_correo.getText().toString());
-            nuevo_estudiante.put("genero", sp_genero.getSelectedItem().toString());
-            nuevo_estudiante.put("estrato", sp_estrato.getSelectedItem().toString());
-            nuevo_estudiante.put("etnia", sp_etnia.getSelectedItem().toString());
-            nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
+            //Verificar la validez del correo
+            String regex = "^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
+            if(!et_correo.getText().toString().matches(regex)){
+                Toast.makeText(this, "Ingresa una dirección de correo válida", Toast.LENGTH_SHORT).show();
+            }else {
 
+                //Ingresar los datos del estudiante en el objeto
+                ContentValues nuevo_estudiante = new ContentValues();
+                nuevo_estudiante.put("nombre", et_nombre.getText().toString());
+                nuevo_estudiante.put("password", et_password.getText().toString());
+                nuevo_estudiante.put("edad", et_edad.getText().toString());
+                nuevo_estudiante.put("correo", et_correo.getText().toString());
+                nuevo_estudiante.put("genero", sp_genero.getSelectedItem().toString());
+                nuevo_estudiante.put("estrato", sp_estrato.getSelectedItem().toString());
+                nuevo_estudiante.put("etnia", sp_etnia.getSelectedItem().toString());
+                nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
 
-            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
-            SQLiteDatabase db = admin.getWritableDatabase();
-            db.insert("estudiantes", null, nuevo_estudiante);
-            /*
-            admin.close();
-            db.close();
-            */
+                //Insertar el estudiante en la db
+                AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+                SQLiteDatabase db = admin.getWritableDatabase();
+                db.insert("estudiantes", null, nuevo_estudiante);
+                admin.close();
+                db.close();
+                Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                //Cambio de pantalla
+                IrAIniciarSesion();
+            }
         }
         else{
             // Informar error
             Toast.makeText(this, "Tienes que rellenar todos los campos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void IrAIniciarSesion(){
+        Intent i = new Intent(this, InicioSesion.class);
+        startActivity(i);
     }
 
 }
