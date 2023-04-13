@@ -129,7 +129,7 @@
     "Pregunta": "Aparte del precio, qué más te influenciaría para comprar un libro de ciencia ficción",
     "alternativas": [
       "El diseño de la pasta es atractivo.",
-      "Un amigo habla acerca de él y te lo recomienda",
+      "Un amigo habla acerca de él y te lo recomienda.",
       "Leyendo rápidamente partes de él.",
       "Tienes historias reales, experiencias y ejemplos."
     ]
@@ -162,12 +162,12 @@
     ]
   },
   "v7": {
-    "Pregunta": "Usted no está seguro como se deletrea trascendente o trascendente ¿U qué haría?",
+    "Pregunta": "Usted no está seguro como se deletrea trascendente ¿Usted qué haría?",
     "alternativas": [
       "Veo la palabra en mi mente y escojo según como la veo.",
-      "Pienso cómo suena cada palabra y escojo un",
+      "Pienso cómo suena cada palabra y escojo una.",
       "Busco la palabra en un diccionario.",
-      "Escribir ambas palabras en un papel y escojo un"
+      "Escribir ambas palabras en un papel y escojo una."
     ]
   },
   "v8": {
@@ -189,7 +189,7 @@
     ]
   },
   "v10": {
-    "Pregunta": "Usted está usando un libro, disco compacto o página de Internet para aprender a tomar fotos con su cámara digital nuev Usted le gustaría tener:",
+    "Pregunta": "Usted está usando un libro, disco compacto o página de Internet para aprender a tomar fotos con su cámara digital nueva. A usted le gustaría tener:",
     "alternativas":
     ["Esquemas o diagramas que muestran la cámara y la función de cada parte.",
       "Una oportunidad de hacer preguntas acerca de la cámara y sus características.",
@@ -198,11 +198,11 @@
     ]
   },
   "v11": {
-    "Pregunta": "Usted quiere aprender un programa nuevo, habilidad o juego en una computador Usted qué hace:",
+    "Pregunta": "Usted quiere aprender un programa nuevo, habilidad o juego en una computador. Usted qué hace:",
     "alternativas": [
-      "Seguir los esquemas en el libro que acompaña el program",
-      "Hablar con gente que sabe acerca del program",
-      "Leer las instrucciones que vienen en el program",
+      "Seguir los esquemas en el libro que acompaña el programa.",
+      "Hablar con gente que sabe acerca del programa.",
+      "Leer las instrucciones que vienen en el programa.",
       "Use los controles o el teclado."
     ]
   },
@@ -216,7 +216,7 @@
     ]
   },
   "v13": {
-    "Pregunta": "Recuerde un momento en su vida en que U aprendió a hacer algo nuevo. Trate de evitar escoger una destreza física, como andar en biciclet U Aprendió mejor:",
+    "Pregunta": "Recuerde un momento en su vida en que Usted aprendió a hacer algo nuevo. Trate de evitar escoger una destreza física, como andar en bicicleta Ud. Aprendió mejor:",
     "alternativas": [
       "Con esquemas y diagramas o pistas visuales.",
       "Escuchando a alguien explicarlo o haciendo preguntas.",
@@ -225,16 +225,16 @@
     ]
   },
   "v14": {
-    "Pregunta": "U Prefiere un maestro o conferencista que use:",
+    "Pregunta": "Ud. Prefiere un maestro o conferencista que use:",
     "alternativas": [
       "Diagramas, esquemas o gráficos.",
       "Preguntas y respuestas, pláticas y oradores invitados.",
-      "Folletos, libros o lecturas",
+      "Folletos, libros o lecturas.",
       "Demostraciones, modelos o sesiones prácticas."
     ]
   },
   "v15": {
-    "Pregunta": "Un grupo de turistas quiere aprender acerca de parques o reservas naturales en su áre Usted:",
+    "Pregunta": "Un grupo de turistas quiere aprender acerca de parques o reservas naturales en su área. Usted:",
     "alternativas": [
       "Les muestra imágenes de Internet, fotos o libros con dibujos.",
       "Les da una plática acerca de parques o reservas naturales.",

@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondopantalla"
     tools:context=".InicioSesion">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="464dp"
+        android:background="@mipmap/boton"
         android:onClick="IniciarSesion"
         android:text="@string/Menu_IniciaSesion"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,9 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="212dp"
-        android:ems="10"
         android:autofillHints="emailAddress"
-        android:hint="@string/Registro_Email"
+        android:hint="Email"
+        android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -36,13 +38,56 @@
         android:id="@+id/et_PasswordInicioSesion"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:ems="10"
+        android:layout_marginTop="80dp"
         android:autofillHints="password"
-        android:hint="@string/Registro_Contraseña"
+        android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_CorreoInicioSesion" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/Registro_Email"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="172dp"
+        android:text="@string/Registro_Email"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="292dp"
+        android:text="@string/Registro_Contraseña"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

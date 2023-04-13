@@ -98,7 +98,7 @@ public class Encuesta extends AppCompatActivity {
         lanzar_pregunta();
     }
 
-    void lanzar_pregunta() {
+    private void lanzar_pregunta() {
         Random random = new Random();
         List<String> preguntas_respuestas;
         String claveAleatoria;
@@ -252,4 +252,3 @@ public class Encuesta extends AppCompatActivity {
         rb4d.setChecked(false);
     }
 }
-

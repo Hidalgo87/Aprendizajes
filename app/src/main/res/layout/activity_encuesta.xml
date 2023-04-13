@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fondopantalla"
     tools:context=".Encuesta">
 
 
@@ -11,88 +12,98 @@
         android:id="@+id/textViewD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="8dp"
         android:text="d"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/tableBotones"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones" />
 
     <TextView
         android:id="@+id/textViewC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="48dp"
         android:text="c"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewD"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
 
     <TextView
         android:id="@+id/textViewB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="47dp"
         android:text="b"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewC"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
 
     <TextView
         android:id="@+id/textViewA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="47dp"
         android:text="a"
+        android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewB"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="284dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="2dp"
         android:text="4"
-        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/tableBotones"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="228dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="2dp"
         android:text="3"
-        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/tableBotones"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="2dp"
         android:text="2"
-        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/tableBotones"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textView1" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="2dp"
         android:text="1"
-        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/tableBotones"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tableBotones" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -109,41 +120,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="hablamelo"
-            android:textSize="16sp" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textViewPreguntaA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textViewPreguntaB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textViewPreguntaC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/textViewPreguntaD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
 
     </LinearLayout>
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
         android:layout_marginTop="4dp"
+        android:background="@mipmap/boton"
         android:onClick="Next_Question"
-        android:text="Button"
+        android:text="@string/Encuesta_Siguiente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,6 +176,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Seguron"
+        android:textSize="20dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,11 +185,11 @@
 
     <TableLayout
         android:id="@+id/tableBotones"
-        android:layout_width="241dp"
-        android:layout_height="209dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="192dp"
+        android:layout_height="201dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
@@ -177,34 +200,38 @@
             <RadioButton
                 android:id="@+id/radioButton1a"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="0,0" />
+                android:tag="0,0"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton2a"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="0,1" />
+                android:tag="0,1"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton3a"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="0,2" />
+                android:tag="0,2"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton4a"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="0,3" />
+                android:tag="0,3"
+                android:theme="@style/RadioButtonStyle"/>
         </TableRow>
 
         <TableRow
@@ -214,34 +241,38 @@
             <RadioButton
                 android:id="@+id/radioButton1b"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="1,0" />
+                android:tag="1,0"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton2b"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="1,1" />
+                android:tag="1,1"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton3b"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="1,2" />
+                android:tag="1,2"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton4b"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="1,3" />
+                android:tag="1,3"
+                android:theme="@style/RadioButtonStyle"/>
         </TableRow>
 
         <TableRow
@@ -251,34 +282,38 @@
             <RadioButton
                 android:id="@+id/radioButton1c"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="2,0" />
+                android:tag="2,0"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton2c"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="2,1" />
+                android:tag="2,1"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton3c"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="2,2" />
+                android:tag="2,2"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton4c"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="2,3" />
+                android:tag="2,3"
+                android:theme="@style/RadioButtonStyle"/>
         </TableRow>
 
         <TableRow
@@ -288,34 +323,38 @@
             <RadioButton
                 android:id="@+id/radioButton1d"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="3,0" />
+                android:tag="3,0"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton2d"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="3,1" />
+                android:tag="3,1"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton3d"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="3,2" />
+                android:tag="3,2"
+                android:theme="@style/RadioButtonStyle"/>
 
             <RadioButton
                 android:id="@+id/radioButton4d"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
-                android:tag="3,3" />
+                android:tag="3,3"
+                android:theme="@style/RadioButtonStyle"/>
         </TableRow>
     </TableLayout>
 

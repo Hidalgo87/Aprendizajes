@@ -23,10 +23,4 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, InicioSesion.class);
         startActivity(i);
     }
-
-    public void IrAEncuesta(View view){
-        Intent i = new Intent(this, Encuesta.class);
-        startActivity(i);
-    }
-
 }

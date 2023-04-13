@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A39F9F"
     tools:context=".Registro">
 
     <LinearLayout
@@ -19,18 +20,32 @@
             android:layout_width="match_parent"
             android:layout_height="10dp" />
 
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Nombre"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
         <EditText
             android:id="@+id/et_Nombre"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints="name"
-            android:hint="@string/Registro_Nombre"
+            android:hint="Nombre Completo"
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
-        <Space
+        <TextView
+            android:id="@+id/textView9"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Edad"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/et_Edad"
@@ -38,14 +53,19 @@
             android:layout_height="48dp"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/Registro_Edad"
+            android:hint="Años"
             android:inputType="number"
             android:maxLength="3"
             android:textAlignment="center" />
 
-        <Space
+        <TextView
+            android:id="@+id/textView10"
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Email"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/et_Email"
@@ -53,13 +73,18 @@
             android:layout_height="48dp"
             android:autofillHints="emailAddress"
             android:ems="10"
-            android:hint="@string/Registro_Email"
+            android:hint="Email"
             android:inputType="textEmailAddress"
             android:textAlignment="center" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Registro_Contraseña"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/et_Password"
@@ -67,13 +92,13 @@
             android:layout_height="48dp"
             android:autofillHints="password"
             android:ems="10"
-            android:hint="@string/Registro_Contraseña"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textAlignment="center" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="378dp"
+            android:id="@+id/textView12"
+            android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Genero"
             android:textAlignment="center"
@@ -86,11 +111,12 @@
             android:layout_height="48dp"
             android:dropDownWidth="wrap_content"
             android:entries="@array/Spiner_Genero"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="384dp"
+            android:layout_width="369dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Etnia"
             android:textAlignment="center"
@@ -106,7 +132,7 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="378dp"
+            android:layout_width="373dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Estrato_Social"
             android:textAlignment="center"
@@ -140,12 +166,28 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@mipmap/boton"
         android:onClick="Registrar"
         android:text="@string/Menu_Registrate"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchTratamientoDatos" />
+
+    <Switch
+        android:id="@+id/switchTratamientoDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Aceptar_Politica_Tratamiento_Datos"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 

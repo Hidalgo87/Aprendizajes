@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Encuesta Estilos de Aprendizaje</string>
     <string name="Menu_Bienvenida">Bienvenido a la Encuesta</string>
-    <string name="Menu_Registrate">Registrate</string>
+    <string name="Menu_Registrate">Regístrate</string>
     <string name="Menu_IniciaSesion">Inicia Sesión</string>
     <string name="Registro_Nombre">Nombre</string>
     <string name="Registro_Edad">Edad</string>
@@ -11,6 +11,8 @@
     <string name="Registro_Estrato_Social">Estrato Social</string>
     <string name="Registro_Etnia">Minoría Étnica</string>
     <string name="Spiner_Ingresos_Familiares">Ingresos Familiares Mensuales</string>
+    <string name="Encuesta_Siguiente">Siguiente</string>
+    <string name="Aceptar_Politica_Tratamiento_Datos">Acepta la política de tratamiento de datos</string>
 
     <string-array name="Spiner_Genero">
         <item>Masculino</item>
