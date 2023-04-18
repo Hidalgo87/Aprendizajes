@@ -4,11 +4,11 @@
         <item name="android:colorButtonNormal">#00ED2020</item>
         <!-- Primary brand color. -->
         <item name="colorPrimary">#F74235</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">#B36161</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">#B36161</item>
+        <item name="colorSecondaryVariant">#B36161</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
@@ -19,5 +19,6 @@
         <item name="colorControlNormal">#000000</item>
         <item name="android:textColorSecondary">#FF0000</item>
         <item name="android:height">48dp</item>
+        <item name="colorAccent">#B36161</item>
     </style>
 </resources>

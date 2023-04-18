@@ -200,11 +200,11 @@
             <RadioButton
                 android:id="@+id/radioButton1a"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="0,0"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton2a"

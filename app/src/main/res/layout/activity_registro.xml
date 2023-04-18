@@ -38,7 +38,6 @@
             android:autofillHints="name"
             android:textColorHint="#B36161"
             android:hint="Nombre Completo"
-
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
