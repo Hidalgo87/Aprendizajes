@@ -24,6 +24,7 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
+
         sp_genero = (Spinner) findViewById(R.id.sp_Genero);
         sp_estrato = (Spinner) findViewById(R.id.sp_Estrato);
         sp_etnia = (Spinner) findViewById(R.id.sp_Etnia);

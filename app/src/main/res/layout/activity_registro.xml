@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@mipmap/fondopantalla"
     android:layout_height="match_parent"
-    android:background="#A39F9F"
     tools:context=".Registro">
 
     <LinearLayout
@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:textColorHint="#B36161"
         app:layout_constraintBaseline_toBaselineOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -25,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Nombre"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -34,7 +36,9 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints="name"
+            android:textColorHint="#B36161"
             android:hint="Nombre Completo"
+
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
@@ -43,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Edad"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -52,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints=""
+            android:textColorHint="#B36161"
             android:ems="10"
             android:hint="Años"
             android:inputType="number"
@@ -63,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Email"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -72,6 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints="emailAddress"
+            android:textColorHint="#B36161"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
@@ -82,6 +90,7 @@
             android:layout_width="398dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Contraseña"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -91,6 +100,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints="password"
+            android:textColorHint="#B36161"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
@@ -101,6 +111,7 @@
             android:layout_width="363dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Genero"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -110,6 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:dropDownWidth="wrap_content"
+            android:textColorHint="#B36161"
             android:entries="@array/Spiner_Genero"
             android:textAlignment="center"
             android:textSize="40sp" />
@@ -119,6 +131,7 @@
             android:layout_width="369dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Etnia"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -128,6 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:entries="@array/Spiner_Etnia"
+            android:textColorHint="#B36161"
             android:textAlignment="center" />
 
         <TextView
@@ -135,6 +149,7 @@
             android:layout_width="373dp"
             android:layout_height="wrap_content"
             android:text="@string/Registro_Estrato_Social"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -144,6 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:entries="@array/Spiner_Estrato_Social"
+            android:textColorHint="#B36161"
             android:textAlignment="center" />
 
         <TextView
@@ -151,6 +167,7 @@
             android:layout_width="399dp"
             android:layout_height="wrap_content"
             android:text="@string/Spiner_Ingresos_Familiares"
+            android:textColorHint="#B36161"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="20sp" />
@@ -160,6 +177,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:entries="@array/Spiner_Ingresos_Familiares"
+            android:textColorHint="#B36161"
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -169,6 +187,7 @@
         android:layout_width="200dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:textColorHint="#B36161"
         android:background="@mipmap/boton"
         android:onClick="Registrar"
         android:text="@string/Menu_Registrate"
@@ -182,6 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
+        android:textColorHint="#B36161"
         android:text="@string/Aceptar_Politica_Tratamiento_Datos"
         android:textSize="18sp"
         android:textAlignment="center"
