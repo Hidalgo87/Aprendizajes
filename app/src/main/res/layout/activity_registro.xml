@@ -36,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:autofillHints="name"
+            android:textColor="@color/black"
             android:textColorHint="#B36161"
             android:hint="Nombre Completo"
             android:inputType="textPersonName"
@@ -57,6 +58,7 @@
             android:layout_height="48dp"
             android:autofillHints=""
             android:textColorHint="#B36161"
+            android:textColor="@color/black"
             android:ems="10"
             android:hint="Años"
             android:inputType="number"
@@ -79,6 +81,7 @@
             android:layout_height="48dp"
             android:autofillHints="emailAddress"
             android:textColorHint="#B36161"
+            android:textColor="@color/black"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
@@ -100,6 +103,7 @@
             android:layout_height="48dp"
             android:autofillHints="password"
             android:textColorHint="#B36161"
+            android:textColor="@color/black"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
@@ -123,7 +127,7 @@
             android:textColorHint="#B36161"
             android:entries="@array/Spiner_Genero"
             android:textAlignment="center"
-            android:textSize="40sp" />
+            android:textSize="40sp"/>
 
         <TextView
             android:id="@+id/textView3"
@@ -141,7 +145,7 @@
             android:layout_height="48dp"
             android:entries="@array/Spiner_Etnia"
             android:textColorHint="#B36161"
-            android:textAlignment="center" />
+            android:textAlignment="center"/>
 
         <TextView
             android:id="@+id/textView2"
@@ -159,7 +163,7 @@
             android:layout_height="48dp"
             android:entries="@array/Spiner_Estrato_Social"
             android:textColorHint="#B36161"
-            android:textAlignment="center" />
+            android:textAlignment="center"/>
 
         <TextView
             android:id="@+id/textView1"
@@ -177,7 +181,7 @@
             android:layout_height="48dp"
             android:entries="@array/Spiner_Ingresos_Familiares"
             android:textColorHint="#B36161"
-            android:textAlignment="center" />
+            android:textAlignment="center"/>
 
     </LinearLayout>
 

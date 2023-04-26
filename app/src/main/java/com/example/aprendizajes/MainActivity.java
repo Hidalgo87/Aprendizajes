@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.mongodb.client.MongoClient;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -27,7 +27,7 @@ public class InicioSesion extends AppCompatActivity {
         if(tv_correo.getText().toString().length() != 0 && tv_password.getText().toString().length() != 0){
             if(credenciales_validas(tv_correo.getText().toString(), tv_password.getText().toString()))
             {
-                IrAEncuesta();
+                IrAEnunciadoPregunta();
             }
             else {
                 // Informar Credenciales inválidas
@@ -52,10 +52,11 @@ public class InicioSesion extends AppCompatActivity {
         return count > 0;
     }
 
-    private void IrAEncuesta(){
-        Intent i = new Intent(this, Encuesta.class);
+    private void IrAEnunciadoPregunta(){
+        Intent i = new Intent(this, EnunciadoPregunta.class);
         i.putExtra("correo", tv_correo.getText().toString());
         i.putExtra("password", tv_password.getText().toString());
         startActivity(i);
     }
+
 }

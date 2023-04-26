@@ -21,4 +21,10 @@
         <item name="android:height">48dp</item>
         <item name="colorAccent">#B36161</item>
     </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

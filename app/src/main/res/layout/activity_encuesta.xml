@@ -24,26 +24,26 @@
         android:id="@+id/textViewC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="48dp"
+        android:layout_marginBottom="8dp"
         android:text="c"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewD"
-        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones" />
 
     <TextView
         android:id="@+id/textViewB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
-        android:layout_marginBottom="2dp"
         android:layout_marginEnd="47dp"
+        android:layout_marginBottom="2dp"
         android:text="b"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewC"
-        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones" />
 
     <TextView
         android:id="@+id/textViewA"
@@ -55,7 +55,7 @@
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewB"
-        app:layout_constraintEnd_toStartOf="@+id/tableBotones"/>
+        app:layout_constraintEnd_toStartOf="@+id/tableBotones" />
 
     <TextView
         android:id="@+id/textView4"
@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewPreguntaB"
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewPreguntaC"
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textViewPreguntaD"
@@ -153,7 +153,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -176,8 +176,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Seguron"
-        android:textSize="20dp"
         android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -213,7 +214,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="0,1"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton3a"
@@ -222,7 +223,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="0,2"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton4a"
@@ -231,7 +232,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="0,3"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -245,7 +246,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="1,0"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton2b"
@@ -254,7 +255,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="1,1"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton3b"
@@ -263,7 +264,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="1,2"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton4b"
@@ -272,7 +273,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="1,3"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -286,7 +287,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="2,0"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton2c"
@@ -295,7 +296,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="2,1"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton3c"
@@ -304,7 +305,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="2,2"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton4c"
@@ -313,7 +314,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="2,3"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
         </TableRow>
 
         <TableRow
@@ -327,7 +328,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="3,0"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton2d"
@@ -336,7 +337,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="3,1"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton3d"
@@ -345,7 +346,7 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="3,2"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
 
             <RadioButton
                 android:id="@+id/radioButton4d"
@@ -354,8 +355,22 @@
                 android:layout_weight="1"
                 android:onClick="onRadioButtonClicked"
                 android:tag="3,3"
-                android:theme="@style/RadioButtonStyle"/>
+                android:theme="@style/RadioButtonStyle" />
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewtimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="Contador"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toEndOf="@+id/tableBotones"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

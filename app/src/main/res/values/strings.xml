@@ -40,4 +40,16 @@
         <item>5M a 7M</item>
         <item>7M o más</item>
     </string-array>
+    <string-array name="Spiner_Prediccion_KOLB">
+        <item>Experiencia concreta</item>
+        <item>Observación reflexiva</item>
+        <item>conceptualización abstracta</item>
+        <item>Experimentación activa</item>
+    </string-array>
+    <string-array name="Spiner_Prediccion_VARK">
+        <item>Visual</item>
+        <item>Auditivo</item>
+        <item>Lecto/Escritor</item>
+        <item>Kinestésico</item>
+    </string-array>
 </resources>

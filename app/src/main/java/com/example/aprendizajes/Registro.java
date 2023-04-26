@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -32,12 +33,12 @@ public class Registro extends AppCompatActivity {
 
         String[] array_genero = {"Masculino","Femenino","No Binario"};
         String[] array_estrato = {"1","2","3","4","5","6"};
-        String[] array_etnia = {"Población Negra","Palenquero","Afrocolombiano", "Raizal", "No Aplica"};
+        String[] array_etnia = {"No Aplica", "Población Negra","Palenquero","Afrocolombiano", "Raizal"};
         String[] array_ingresos = {"3M o menos","3M a 5M","5M a 7M", "7M o más"};
-        sp_genero.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item, array_genero));
-        sp_estrato.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item, array_estrato));
-        sp_etnia.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item, array_etnia));
-        sp_ingresos.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item, array_ingresos));
+        sp_genero.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_registro, array_genero));
+        sp_estrato.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_registro, array_estrato));
+        sp_etnia.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_registro, array_etnia));
+        sp_ingresos.setAdapter(new ArrayAdapter<>(this, R.layout.spinner_item_registro, array_ingresos));
     }
 
 
@@ -67,26 +68,32 @@ public class Registro extends AppCompatActivity {
                     Toast.makeText(this, "Debes aceptar la política para continuar", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    //Ingresar los datos del estudiante en el objeto
-                    ContentValues nuevo_estudiante = new ContentValues();
-                    nuevo_estudiante.put("nombre", et_nombre.getText().toString());
-                    nuevo_estudiante.put("password", et_password.getText().toString());
-                    nuevo_estudiante.put("edad", et_edad.getText().toString());
-                    nuevo_estudiante.put("correo", et_correo.getText().toString());
-                    nuevo_estudiante.put("genero", sp_genero.getSelectedItem().toString());
-                    nuevo_estudiante.put("estrato", sp_estrato.getSelectedItem().toString());
-                    nuevo_estudiante.put("etnia", sp_etnia.getSelectedItem().toString());
-                    nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
+                    if(credenciales_validas(et_correo.getText().toString(),et_password.getText().toString())){
+                        //El usuario ya existe
+                        Toast.makeText(this, "Ingrese un correo electrónico diferente", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        //Ingresar los datos del estudiante en el objeto
+                        ContentValues nuevo_estudiante = new ContentValues();
+                        nuevo_estudiante.put("nombre", et_nombre.getText().toString());
+                        nuevo_estudiante.put("password", et_password.getText().toString());
+                        nuevo_estudiante.put("edad", et_edad.getText().toString());
+                        nuevo_estudiante.put("correo", et_correo.getText().toString());
+                        nuevo_estudiante.put("genero", sp_genero.getSelectedItem().toString());
+                        nuevo_estudiante.put("estrato", sp_estrato.getSelectedItem().toString());
+                        nuevo_estudiante.put("etnia", sp_etnia.getSelectedItem().toString());
+                        nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
 
-                    //Insertar el estudiante en la db
-                    AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
-                    SQLiteDatabase db = admin.getWritableDatabase();
-                    db.insert("estudiantes", null, nuevo_estudiante);
-                    admin.close();
-                    db.close();
-                    Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
-                    //Cambio de pantalla
-                    IrAIniciarSesion();
+                        //Insertar el estudiante en la db
+                        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+                        SQLiteDatabase db = admin.getWritableDatabase();
+                        db.insert("estudiantes", null, nuevo_estudiante);
+                        admin.close();
+                        db.close();
+                        Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
+                        //Cambio de pantalla
+                        IrAIniciarSesion();
+                    }
                 }
             }
         }
@@ -94,6 +101,19 @@ public class Registro extends AppCompatActivity {
             // Informar error
             Toast.makeText(this, "Tienes que rellenar todos los campos", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private boolean credenciales_validas(String correo, String password){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+        SQLiteDatabase db = admin.getWritableDatabase();
+        String[] argumentos= {correo,password};
+        Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM estudiantes e WHERE e.correo= ? AND e.password=?",argumentos);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+        admin.close();
+        db.close();
+        return count > 0;
     }
 
     private void IrAIniciarSesion(){

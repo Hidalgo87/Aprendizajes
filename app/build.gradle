@@ -29,10 +29,12 @@ android {
 }
 
 dependencies {
-
+    implementation 'org.mongodb:mongo-java-driver:3.12.13'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.sun.mail:android-mail:1.6.4'
+    implementation 'com.sun.mail:android-activation:1.6.4'
     implementation files('jackson-databind-2.15.0-rc2.jar"')
     implementation files('jackson-databind-2.15.0-rc2.jar')
     implementation files('jackson-annotations-2.15.0-rc2.jar')
