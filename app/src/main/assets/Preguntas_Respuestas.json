@@ -144,7 +144,7 @@
     ]
   },
   "v5": {
-    "Pregunta": "Usted tiene un problema con la rodill Usted preferiría que el doctor:",
+    "Pregunta": "Usted tiene un problema con la rodilla Usted preferiría que el doctor:",
     "alternativas": [
       "Te enseñe un diagrama lo que está mal.",
       "Te describa lo qué está mal.",
@@ -209,10 +209,10 @@
   "v12": {
     "Pregunta": "Estás ayudando a alguien que quiere a ir al aeropuerto, al centro del pueblo o la estación del ferrocarril. Usted hace:",
     "alternativas": [
-      "Les dibuja un croquis o les da un map",
+      "Les dibuja un croquis o les da un mapa.",
       "Les dice las direcciones.",
-      "Anote las direcciones en un papel (sin map.",
-      "Va con la person"
+      "Anote las direcciones en un papel (sin mapa).",
+      "Va con la persona."
     ]
   },
   "v13": {
@@ -221,7 +221,7 @@
       "Con esquemas y diagramas o pistas visuales.",
       "Escuchando a alguien explicarlo o haciendo preguntas.",
       "Con instrucciones escritas, en un manual o libro de texto.",
-      ".Viendo una demostración."
+      "Viendo una demostración."
     ]
   },
   "v14": {

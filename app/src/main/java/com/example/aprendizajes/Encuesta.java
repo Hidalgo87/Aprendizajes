@@ -2,7 +2,9 @@ package com.example.aprendizajes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -29,11 +31,12 @@ public class Encuesta extends AppCompatActivity {
     TextView tvPregunta, tvPreguntaA, tvPreguntaB, tvPreguntaC, tvPreguntaD, tvPreguntaContador;
     RadioButton rb1a, rb1b, rb1c, rb1d, rb2a, rb2b, rb2c, rb2d, rb3a, rb3b, rb3c, rb3d, rb4a, rb4b,
     rb4c, rb4d;
-
-    //NUEVO
     CountDownTimer countDownTimer;
     TextView textViewTimer;
     List<String> lista_mostrada;
+
+    //NUEVO
+    AdminSQLiteOpenHelper admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +57,8 @@ public class Encuesta extends AppCompatActivity {
             }
         };
         countDownTimer.start();
-
+        ECkolb= 0; ORkolb= 0; CAkolb= 0; EAkolb = 0;
+        Vvark= 0; Avark= 0; Rvark= 0; Kvark= 0;
         //La información con la que inició sesión
         correo = getIntent().getStringExtra("correo");
         password = getIntent().getStringExtra("password");
@@ -90,6 +94,7 @@ public class Encuesta extends AppCompatActivity {
         this.diccionario = lj.obtener_diccionario(getApplicationContext());
         this.copia_diccionario = lj.obtener_diccionario(getApplicationContext());
 
+        admin = new AdminSQLiteOpenHelper(this, "DataBase", null, 1);
         //Lanza la primera pregunta
         lista_mostrada=lanzar_pregunta();
     }
@@ -153,7 +158,7 @@ public class Encuesta extends AppCompatActivity {
         if (!estan_seleccionados_radio_bt()) {
             Toast.makeText(this, "Debes valorar los 4 items", Toast.LENGTH_SHORT).show();
         } else {
-            //TODO: Guardar resultados
+            String clave = lista_mostrada.get(0);
             List<String> orden_real = diccionario.get(lista_mostrada.get(0));
             orden_real.remove(0);
             lista_mostrada.remove(0);
@@ -162,23 +167,44 @@ public class Encuesta extends AppCompatActivity {
             for (int i=0;i<4;i++){
                 for (int j=0;j<4;j++){
                     if(orden_real.get(i).equals(lista_mostrada.get(j))){
-                        String respuesta_elegida = orden_real.get(i);
-                        respuesta_ordenadas[i] = obtener_calificacion(i);
+                        respuesta_ordenadas[j] = obtener_calificacion(i);
                     }
                 }
             }
+            ContentValues updateValues = new ContentValues();
+            updateValues.put(clave+"a",String.valueOf(respuesta_ordenadas[0]));
+            updateValues.put(clave+"b",String.valueOf(respuesta_ordenadas[1]));
+            updateValues.put(clave+"c",String.valueOf(respuesta_ordenadas[2]));
+            updateValues.put(clave+"d",String.valueOf(respuesta_ordenadas[3]));
+            SQLiteDatabase db = admin.getWritableDatabase();
+            db.update("estudiantes", updateValues, "correo = ?", new String[]{correo});
+            //TODO: MAI BRO
+            //db.close();
+
             Toast.makeText(this, Arrays.toString(respuesta_ordenadas), Toast.LENGTH_SHORT).show();
+
+            //Levar la cuenta total
+            if(clave.contains("v")){
+                Vvark += respuesta_ordenadas[0];
+                Avark += respuesta_ordenadas[1];
+                Rvark += respuesta_ordenadas[2];
+                Kvark += respuesta_ordenadas[3];
+            }else {
+                ECkolb += respuesta_ordenadas[0];
+                ORkolb += respuesta_ordenadas[1];
+                CAkolb += respuesta_ordenadas[2];
+                EAkolb += respuesta_ordenadas[3];
+            }
+
             //Verificar si quedan más preguntas
             if (this.copia_diccionario.size() != 0) {
                 limpiar_radio_bt();
                 //TODO: CAMBIAR ESTOOOOOO ESTOY ES PROBANDOOO RAPIDOOOO
-                //lista_mostrada = lanzar_pregunta();
-                IrAPrediccionEncuesta();
+                //GuardarEIrAPrediccionEncuesta();
+                lista_mostrada = lanzar_pregunta();
             } else {
                 Toast.makeText(this, "Ya terminaste", Toast.LENGTH_SHORT).show();
-
-                //AQUI HAY QUE PONER LA PREDICCION DE LA ENCUESTA
-                IrAMenuPrincipal();
+                GuardarEIrAPrediccionEncuesta();
             }
         }
     }
@@ -243,7 +269,7 @@ public class Encuesta extends AppCompatActivity {
                 }
 
         }
-        return 321;
+        return 0;
     }
     public void onRadioButtonClicked(View view) {
         // Busca el botón seleccionado en la tabla
@@ -294,21 +320,37 @@ public class Encuesta extends AppCompatActivity {
         }
     }
 
-    //Cuando le da al botón siguiente.
-
-
-    private void enviar_respuestas(String clave, int a, int b, int c, int d){
-
-    }
-
-    private void IrAMenuPrincipal(){
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-    }
-
-    private void IrAPrediccionEncuesta(){
+    private void GuardarEIrAPrediccionEncuesta(){
+        int varkMaxValue = Math.max(Math.max(Math.max(Vvark, Avark), Rvark), Kvark);
+        int kolbMaxValue = Math.max(Math.max(Math.max(ECkolb, ORkolb), EAkolb), CAkolb);
+        String estiloVark = "";
+        String estiloKolb = "";
+        if (varkMaxValue == Vvark){
+            estiloVark = "Visual";
+        } else if (varkMaxValue == Avark) {
+            estiloVark = "Auditivo";
+        }else if (varkMaxValue == Rvark) {
+            estiloVark = "Lecto / Escritor";
+        }else if (varkMaxValue == Kvark) {
+            estiloVark = "Kinestésico";
+        }
+        if (kolbMaxValue == ECkolb){
+            estiloKolb = "Experiencia concreta";
+        } else if (kolbMaxValue == ORkolb) {
+            estiloKolb = "Observación reflexiva";
+        }else if (kolbMaxValue == CAkolb) {
+            estiloKolb = "Conceptualización abstracta";
+        }else if (kolbMaxValue == EAkolb) {
+            estiloKolb = "Experimentación activa";
+        }
+        SQLiteDatabase db = admin.getWritableDatabase();
+        ContentValues updateValues = new ContentValues();
+        updateValues.put("estiloKOLB",estiloKolb);
+        updateValues.put("estiloVARK",estiloVark);
+        db.update("estudiantes", updateValues, "correo = ?", new String[]{correo});
         Intent i = new Intent(this, PrediccionEstiloAprendizaje.class);
-        i.putExtra("correo", correo);
+        i.putExtra("vark", estiloVark);
+        i.putExtra("kolb", estiloKolb);
         startActivity(i);
     }
 

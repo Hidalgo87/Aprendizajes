@@ -85,12 +85,11 @@ public class Registro extends AppCompatActivity {
                         nuevo_estudiante.put("ingresos_familiares", sp_ingresos.getSelectedItem().toString());
 
                         //Insertar el estudiante en la db
-                        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+                        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "DataBase", null, 1);
                         SQLiteDatabase db = admin.getWritableDatabase();
                         db.insert("estudiantes", null, nuevo_estudiante);
                         admin.close();
                         db.close();
-                        Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show();
                         //Cambio de pantalla
                         IrAIniciarSesion();
                     }
@@ -104,7 +103,7 @@ public class Registro extends AppCompatActivity {
     }
 
     private boolean credenciales_validas(String correo, String password){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "DataBase", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String[] argumentos= {correo,password};
         Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM estudiantes e WHERE e.correo= ? AND e.password=?",argumentos);

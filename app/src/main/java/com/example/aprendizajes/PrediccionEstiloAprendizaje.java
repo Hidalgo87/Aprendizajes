@@ -50,17 +50,18 @@ public class PrediccionEstiloAprendizaje extends AppCompatActivity {
     public void EnviarEncuesta(View view) {
         sp_prediccion_kolb = findViewById(R.id.spinner_KOLB);
         sp_prediccion_vark = findViewById(R.id.spinner_VARK);
-        Intent i = getIntent();
-        String correo = i.getStringExtra("correo");
-        //probando_enviar_correo(correo,"oaa");
-        //enviarCorreo("juanfgomez6@gmail.com","conciencia1.", correo, "Terminaste la encuesta", "Bien hecho");
-        IrAMenu();
-    }
-
-    private void IrAMenu() {
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i_obtenido = getIntent();
+        Intent i = new Intent(this, ResultadosEncuesta.class);
+        i.putExtra("pr_kolb", sp_prediccion_kolb.getSelectedItem().toString());
+        i.putExtra("pr_vark", sp_prediccion_vark.getSelectedItem().toString());
+        i.putExtra("vark", i_obtenido.getStringExtra("vark"));
+        i.putExtra("kolb", i_obtenido.getStringExtra("kolb"));
         startActivity(i);
     }
 
+    private void IrAResultadosEncuesta() {
+        Intent i = new Intent(this, ResultadosEncuesta.class);
+        startActivity(i);
+    }
    }
 

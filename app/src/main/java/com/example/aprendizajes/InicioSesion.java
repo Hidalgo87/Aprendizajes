@@ -40,7 +40,7 @@ public class InicioSesion extends AppCompatActivity {
     }
 
     private boolean credenciales_validas(String correo, String password){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "BaseDatos", null, 1);
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "DataBase", null, 1);
         SQLiteDatabase db = admin.getWritableDatabase();
         String[] argumentos= {correo,password};
         Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM estudiantes e WHERE e.correo= ? AND e.password=?",argumentos);
